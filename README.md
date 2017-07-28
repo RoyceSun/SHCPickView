@@ -14,6 +14,14 @@
 */
 +(instancetype)showInView:(UIView*)view didSelectWithBlock:(shc_backBlock)block cancelBlock:(shc_actionBlock)cancel;
 ```
+初始化
+```Objective-C
+SHCPickView *pickView = [SHCPickView showInView:self.view didSelectWithBlock:^(NSString *ourAddress, NSString *province, NSString *city) {
+NSLog(@"%@",ourAddress);
+} cancelBlock:^{
+}];
+```
+属性
 ```Objective-C
 /* 数据源 */
 @property (nonatomic, strong)NSMutableArray *arratData;
